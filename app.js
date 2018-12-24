@@ -33,13 +33,13 @@ app.post("/", function(req, res){
 
     var jsonData = JSON.stringify(data);
 
-    var options = { url: "https://us7.api.mailchimp.com/3.0/lists/b31802eb5c", 
-    method: "POST", 
-    headers: {
-         "Authorization": "MBadiane a9d679f19c6f4d720582e6dcc876654d - us7" 
-        },
-        body: jsonData 
-    };
+    var options = { 
+        url: "https://us7.api.mailchimp.com/3.0/lists/b31802eb5c", 
+        method: "POST", 
+        headers: { 
+            Authorization: "MBadiane a9d679f19c6f4d720582e6dcc876654d - us7" }, 
+            body: jsonData 
+        };
 
     request(options, function(error, response, body){
         if (error) {
